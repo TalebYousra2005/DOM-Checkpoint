@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.tshirt,
+.hoodie {
+  border: 3px solid black;
+  padding: 50px;
+  width: 40%;
+}
+a {
+  margin-right: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 50px;
+}
+span {
+  font-weight: 700;
+  font-size: 25px;
+}
+.app {
+  padding: 80px 0px;
+}
