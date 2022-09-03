@@ -4,7 +4,7 @@ var delBtns = document.querySelectorAll(".del");
 var likeBtns = document.querySelectorAll(".like");
 var isLiked = false;
 var price = document.querySelector(".totalPrice");
-var unitePrice = document.querySelectorAll(".unitPrice");
+
 
 // plus
 plusBtns.forEach(function (plus) {
@@ -14,11 +14,14 @@ plusBtns.forEach(function (plus) {
         plus.previousElementSibling.previousElementSibling
           .previousElementSibling.textContent
       ) + 1;
-      var unitPriceValue = Number(unitePrice.textContent)
-    price.textContent = Number(price.textContent) + unitPriceValue;
+
+    // var unitePrice = document.querySelectorAll(".unitPrice");
+    // var unitPriceValue = Number(unitePrice.textContent);
+    // console.log(unitPriceValue);
+    
+    price.textContent = Number(price.textContent) + 250;
   });
 });
-
 
 // minus
 minusBtns.forEach(function (minus) {
@@ -35,13 +38,12 @@ minusBtns.forEach(function (minus) {
             .previousElementSibling.previousElementSibling.textContent
         ) - 1;
       price.textContent =
-        Number(price.textContent) - Number(unitePrice.textContent);
+        Number(price.textContent) - 250;
     } else {
       minus.parentElement.remove();
     }
   });
 });
-
 
 // deletion
 delBtns.forEach(function (del) {
@@ -49,7 +51,6 @@ delBtns.forEach(function (del) {
     del.parentElement.remove();
   });
 });
-
 
 // liking
 likeBtns.forEach(function (like) {
